@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>守护蔚蓝与生灵 - 环保与动物保护博客</title>
+    <title>愿世界和平 | 停止战争的呼唤</title>
     <style>
-        /* 基础样式重置 */
+        /* 基础样式复位 */
         * {
             margin: 0;
             padding: 0;
@@ -13,164 +13,163 @@
         }
 
         body {
-            font-family: 'Helvetica Neue', Helvetica, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, "Microsoft YaHei";
             line-height: 1.6;
             color: #333;
-            background-color: #f7f9f6;
+            background-color: #f7f9fa;
         }
 
-        a {
-            color: #2c6e49;
+        /* 顶部导航 */
+        header {
+            background-color: #ffffff;
+            border-bottom: 1px solid #e1e8ed;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #1da1f2;
             text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #555;
+            margin-left: 20px;
+            font-weight: 500;
             transition: color 0.3s;
         }
 
-        a:hover {
-            color: #4c956c;
+        .nav-links a:hover {
+            color: #1da1f2;
         }
 
-        /* 头部页眉 */
-        header {
-            background-color: #2c6e49;
-            color: #fefee3;
-            padding: 2rem 1rem;
+        /* 横幅区 (Hero Section) */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1518364538800-6bcb3f25da49?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
+            color: #fff;
             text-align: center;
+            padding: 100px 20px;
         }
 
-        header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            letter-spacing: 2px;
         }
 
-        header p {
-            font-size: 1.1rem;
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
             font-weight: 300;
-            opacity: 0.9;
-        }
-
-        /* 导航栏 */
-        nav {
-            background-color: #4c956c;
-            display: flex;
-            justify-content: center;
-            padding: 0.8rem;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        nav a {
-            color: white;
-            margin: 0 1.5rem;
-            font-weight: bold;
-        }
-
-        nav a:hover {
-            color: #fefee3;
         }
 
         /* 主体布局 */
         .container {
-            max-width: 1200px;
-            margin: 2rem auto;
-            padding: 0 1rem;
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
             display: grid;
             grid-template-columns: 2fr 1fr;
-            gap: 2rem;
+            gap: 30px;
         }
 
         /* 文章列表 */
-        main {
+        .main-content {
             display: flex;
             flex-direction: column;
-            gap: 2rem;
+            gap: 40px;
         }
 
-        article {
-            background: white;
-            padding: 2rem;
+        .post {
+            background: #fff;
+            padding: 30px;
             border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0,0,0,0.05);
         }
 
-        article h2 {
-            color: #2c6e49;
-            margin-bottom: 0.5rem;
-            font-size: 1.8rem;
-        }
-
-        .meta {
+        .post-meta {
             font-size: 0.9rem;
-            color: #777;
-            margin-bottom: 1rem;
-            border-bottom: 1px solid #eee;
-            padding-bottom: 0.5rem;
+            color: #888;
+            margin-bottom: 10px;
         }
 
-        .meta span {
-            margin-right: 1rem;
+        .post-title {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: #1a1a1a;
         }
 
-        article p {
-            margin-bottom: 1rem;
-            text-align: justify;
+        .post-content p {
+            margin-bottom: 15px;
+            color: #4a4a4a;
+        }
+
+        /* 引用样式 */
+        blockquote {
+            border-left: 4px solid #1da1f2;
+            padding-left: 15px;
+            margin: 20px 0;
+            font-style: italic;
+            color: #555;
+            background: #f0f7fc;
+            padding: 15px;
+            border-radius: 0 4px 4px 0;
         }
 
         /* 侧边栏 */
-        aside {
+        .sidebar {
             display: flex;
             flex-direction: column;
-            gap: 2rem;
+            gap: 30px;
         }
 
         .widget {
-            background: white;
-            padding: 1.5rem;
+            background: #fff;
+            padding: 25px;
             border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0,0,0,0.05);
         }
 
-        .widget h3 {
-            color: #2c6e49;
-            margin-bottom: 1rem;
-            border-left: 4px solid #4c956c;
-            padding-left: 0.5rem;
+        .widget-title {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #1da1f2;
+            padding-bottom: 5px;
+            color: #1a1a1a;
         }
 
-        .widget ul {
-            list-style: none;
-        }
-
-        .widget li {
-            margin-bottom: 0.5rem;
-            padding-bottom: 0.5rem;
-            border-bottom: 1px dashed #eee;
-        }
-
-        /* 践行环保倡议清单 */
-        .checklist li {
-            display: flex;
-            align-items: center;
-        }
-        .checklist li::before {
-            content: "✓";
-            color: #4c956c;
-            font-weight: bold;
-            margin-right: 0.5rem;
+        .peace-symbol {
+            font-size: 4rem;
+            text-align: center;
+            color: #1da1f2;
+            margin: 10px 0;
         }
 
         /* 页脚 */
         footer {
-            background-color: #234e35;
-            color: white;
+            background-color: #1a1a1a;
+            color: #aeaeae;
             text-align: center;
-            padding: 2rem 1rem;
-            margin-top: 4rem;
-        }
-
-        footer p {
+            padding: 30px 20px;
+            margin-top: 60px;
             font-size: 0.9rem;
-            opacity: 0.8;
         }
 
         /* 响应式设计 */
@@ -178,97 +177,101 @@
             .container {
                 grid-template-columns: 1fr;
             }
-            header h1 {
+            .hero h1 {
                 font-size: 2rem;
+            }
+            .nav-container {
+                flex-direction: column;
+                gap: 15px;
+            }
+            .nav-links a {
+                margin: 0 10px;
             }
         }
     </style>
 </head>
 <body>
 
-    <!-- 页头 -->
+    <!-- 导航栏 -->
     <header>
-        <h1>守护蔚蓝与生灵</h1>
-        <p>同呼吸，共命运 —— 关注生态环境与野生动物保护</p>
+        <div class="nav-container">
+            <a href="#" class="logo">🕊️ 愿世界和平</a>
+            <nav class="nav-links">
+                <a href="#">首页</a>
+                <a href="#">关于我们</a>
+                <a href="#">和平宣言</a>
+                <a href="#">联系我们</a>
+            </nav>
+        </div>
     </header>
 
-    <!-- 导航栏 -->
-    <nav>
-        <a href="#">首页</a>
-        <a href="#">环境日志</a>
-        <a href="#">动物叙事</a>
-        <a href="#">参与我们</a>
-    </nav>
+    <!-- 巨幕/横幅区 -->
+    <section class="hero">
+        <h1>铸剑为犁 · 停止战争</h1>
+        <p>“我们必须结束战争，否则战争将结束人类。” —— 约翰·肯尼迪。为了每一个无辜的生命，让我们共同为和平发声。</p>
+    </section>
 
     <!-- 主体内容 -->
     <div class="container">
         
         <!-- 左侧文章区 -->
-        <main>
+        <main class="main-content">
+            
             <!-- 文章 1 -->
-            <article>
-                <h2>消失的冰川与远方的呼唤</h2>
-                <div class="meta">
-                    <span>发表时间：2026年6月2日</span>
-                    <span>作者：绿意行者</span>
-                    <span>分类：环境气候</span>
+            <article class="post">
+                <div class="post-meta">发布于：2026年6月6日 | 作者：和平守护者 | 分类：和平呼吁</div>
+                <h2 class="post-title">为何和平是人类唯一的出路？</h2>
+                <div class="post-content">
+                    <p>枪炮声轰鸣之处，留下的是断壁残垣；硝烟弥漫之时，消逝的是鲜活的生命。战争从来没有真正的赢家，它带来的只有无尽的创伤、流离失所的难民以及破碎的家庭。</p>
+                    <blockquote>
+                        “战争是政治的延续，但它付出的代价，却是无数普通家庭的血与泪。”
+                    </blockquote>
+                    <p>文明的进步应当体现在我们如何消弭分歧，而不是如何制造更具毁灭性的武器。在全球化交织的今天，人类命运休戚与共。面对气候变化、疾病饥荒，我们更需要握手言和，将用于对抗的资源投入到拯救地球的伟业中去。</p>
                 </div>
-                <p>随着全球气温的持续上升，北极圈的冰川正在以超乎想象的速度融化。这不仅是一个关于地理气候的数据，更是成千上万北极熊、海豹等极地生灵的生存危机。失去海冰意味着它们失去了捕食与育雏的家园。</p>
-                <p>保护环境不再是一个遥远的口号。温室效应引发的连锁反应正悄然影响着我们每一个人。减少碳排放、选择绿色出行，是我们留给未来的最后机会。</p>
-                <a href="#">阅读全文 &rarr;</a>
             </article>
 
             <!-- 文章 2 -->
-            <article>
-                <h2>拒绝消费野生动物制品：从我做起</h2>
-                <div class="meta">
-                    <span>发表时间：2026年5月28日</span>
-                    <span>作者：生态卫士</span>
-                    <span>分类：动物保护</span>
+            <article class="post">
+                <div class="post-meta">发布于：2026年5月20日 | 作者：世界之窗 | 分类：难民故事</div>
+                <h2 class="post-title">废墟下的眼睛：渴望重返校园的孩子们</h2>
+                <div class="post-content">
+                    <p>在战火冲突的地区，成千上万的孩子失去了他们的童年。书包被废墟掩埋，教室变成了避难所。他们本该在阳光下奔跑、在课桌前学习，如今却只能在防空洞中惊恐地聆听轰炸声。</p>
+                    <p>停止战争，不仅是为了现在的和平，更是为了保护人类的未来。每一个孩子的眼睛里，都不应该倒映出导弹的轨迹，而应该充满对未来的希望与星光。</p>
                 </div>
-                <p>象牙、犀牛角、穿山甲鳞片……这些所谓的“奢侈品”或“药材”背后，是无数野生动物惨遭盗猎的血泪史。没有买卖，就没有杀害。每一个物种都是生态链中不可或缺的一环，任何一个物种的灭绝都可能引发不可逆转的生态灾难。</p>
-                <p>作为消费者，我们要坚决对野生动物制品说不，并积极向身边的人宣传保护生物多样性的重要性。保护它们，就是保护人类自己。</p>
-                <a href="#">阅读全文 &rarr;</a>
             </article>
+
         </main>
 
         <!-- 右侧边栏 -->
-        <aside>
-            <!-- 践行指南 -->
+        <aside class="sidebar">
+            
+            <!-- 侧栏模块 1 -->
             <div class="widget">
-                <h3>日常环保微行动</h3>
-                <ul class="checklist">
-                    <li>自带购物袋，减少一次性塑料使用</li>
-                    <li>随手关灯，节约每一度电</li>
-                    <li>坚持垃圾分类，促进资源循环</li>
-                    <li>选择公共交通或骑行出行</li>
-                    <li>不购买、不食用野生动物制品</li>
+                <h3 class="widget-title">和平象征</h3>
+                <div class="peace-symbol">🕊️</div>
+                <p style="text-align: center; font-size: 0.9rem; color: #666;">
+                    鸽子与橄榄枝，象征着人类对告别暴力、拥抱宽容的永恒期盼。
+                </p>
+            </div>
+
+            <!-- 侧栏模块 2 -->
+            <div class="widget">
+                <h3 class="widget-title">我们可以做什么？</h3>
+                <ul style="padding-left: 20px; color: #4a4a4a;">
+                    <li style="margin-bottom: 8px;">在社交媒体上传播理性和平的声音，拒绝极端言论。</li>
+                    <li style="margin-bottom: 8px;">关注并支持国际人道主义救援组织，帮助受战火影响的难民。</li>
+                    <li style="margin-bottom: 8px;">消除偏见，从尊重身边的不同文化与声音开始。</li>
                 </ul>
             </div>
 
-            <!-- 热点标签/热门文章 -->
-            <div class="widget">
-                <h3>热门文章</h3>
-                <ul>
-                    <li><a href="#">中国国家公园体制：给野生动物一个真正的家</a></li>
-                    <li><a href="#">海洋塑料污染：那些被塑料困住的海洋生物</a></li>
-                    <li><a href="#">什么是“碳中和”？它如何改变我们的生活</a></li>
-                </ul>
-            </div>
-
-            <!-- 关于本站 -->
-            <div class="widget">
-                <h3>关于博客</h3>
-                <p>这是一个致力于传播环保理念、呼吁保护野生动物的独立博客。我们相信，每一个微小的改变，汇聚起来就能改变世界。</p>
-            </div>
         </aside>
 
     </div>
 
     <!-- 页脚 -->
     <footer>
-        <p>&copy; 2026 守护蔚蓝与生灵博客. 基于对地球的爱而创建.</p>
-        <p>万物各得其和以生，各得其养以成。</p>
+        <p>© 2026 愿世界和平博客. 基于人道主义精神创建.</p>
+        <p style="font-size: 0.8rem; margin-top: 10px; color: #777;">让爱超越仇恨，让和平照亮每一个角落。</p>
     </footer>
 
 </body>
